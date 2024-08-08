@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    /* required for ::before */
+    position: fixed;
+    /* don't scroll with page */
+    z-index: -100;
+    /* place behind elements on page */
+    width: 100%;
+    height: 100%;
+    background-color: #14C2CC;
+    background-image:
+        radial-gradient(circle farthest-side at top right, transparent, #0D64FF), radial-gradient(ellipse farthest-corner at 0% 100%, transparent, #FF00A0);
+    animation: bg-change 10s infinite;
+}
+
+@keyframes bg-change {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(-45deg);
+    }
+}
+
+
+.main {
+
+    width: 800px;
+    height: 500px;
+    backdrop-filter: blur(10px) saturate(188%);
+    -webkit-backdrop-filter: blur(10px) saturate(188%);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+   
+
+}
+
+img {
+    width: 350px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+/* Keyframes for light motion animation */
+@keyframes lightMotion {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply light motion animation on hover */
+img:hover {
+    animation: lightMotion 0.6s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 50px;
+
+    color: #FFFFFF;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.388), 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+.right{
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.right p{
+    font-size: 20px;
+    color: #FFFFFF;
+    
+}
+.socials{
+    display: flex;
+
+
+}
+.socials img{
+    width: 30px;
+    
+}
