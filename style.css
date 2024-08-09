@@ -113,3 +113,46 @@ h1 {
     width: 30px;
     
 }
+
+/* Existing CSS remains unchanged */
+
+/* Media query for devices with a max-width of 444px */
+@media (max-width: 444px) {
+    .main {
+        width: 90%;
+        height: auto;
+        padding: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left img {
+        width: 90%;
+        height: auto;
+        margin: 0;
+        border-radius: 15px;
+    }
+
+    .right h1 {
+        font-size: 52px;
+    }
+
+    .right p {
+        font-size: 16px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .socials img {
+        width: 24px;
+        margin: 0 8px;
+    }
+}
